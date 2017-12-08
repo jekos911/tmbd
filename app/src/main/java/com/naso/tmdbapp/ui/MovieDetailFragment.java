@@ -73,12 +73,13 @@ public class MovieDetailFragment extends Fragment {
             }
         }
 
+        getActivity().setTitle(movie.getOriginalTitle());
+
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
     }
 }

@@ -53,6 +53,7 @@ public class FilmListFragment extends Fragment implements FilmClickListner{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("Фильмы");
 
     }
 

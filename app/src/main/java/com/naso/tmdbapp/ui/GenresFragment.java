@@ -52,6 +52,9 @@ public class GenresFragment extends Fragment {
         });
         setExitTransition(new Fade());
         setEnterTransition(new Fade());
+
+        getActivity().setTitle("Жанры");
+
         return view;
     }
 }
