@@ -14,9 +14,7 @@ import com.naso.tmdbapp.models.MoviesLaboratory;
 
 import java.util.List;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesViewHolder>{
     private List<Movie> movies;

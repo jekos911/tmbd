@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class Movie {
 

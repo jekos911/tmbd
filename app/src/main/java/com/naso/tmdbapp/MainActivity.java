@@ -7,10 +7,6 @@ import android.transition.Fade;
 
 import com.naso.tmdbapp.ui.GenresFragment;
 
-
-
-
-
 public class MainActivity extends AppCompatActivity {
 
     private static FragmentManager fragmentManager = null;

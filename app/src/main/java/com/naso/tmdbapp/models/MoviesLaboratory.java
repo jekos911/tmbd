@@ -3,9 +3,7 @@ package com.naso.tmdbapp.models;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class MoviesLaboratory {
     private static GenresList genresList = new GenresList();
@@ -16,8 +14,6 @@ public class MoviesLaboratory {
     }
     public static void setFilmsList(FilmsList films) { filmList  = films.getMoviesList(); }
     public static void setFilmList(List<Movie> films) { filmList = films; }
-
-
 
     public static List<Genre> getGenres() {
         return genresList.getGenres();

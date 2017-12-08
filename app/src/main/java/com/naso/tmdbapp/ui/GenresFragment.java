@@ -24,9 +24,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by жекос on 02.12.2017.
- */
 
 public class GenresFragment extends Fragment {
 

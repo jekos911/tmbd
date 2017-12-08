@@ -11,9 +11,7 @@ import com.naso.tmdbapp.models.MoviesLaboratory;
 
 import java.util.List;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class GenresAdapter extends RecyclerView.Adapter<GenresViewHolder> {
 

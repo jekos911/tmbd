@@ -1,8 +1,6 @@
 package com.naso.tmdbapp.api;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class TMDbInternetConnection {
     private static TMDbInternetConnection interfaceForApi;

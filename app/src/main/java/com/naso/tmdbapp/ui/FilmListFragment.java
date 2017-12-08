@@ -33,9 +33,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class FilmListFragment extends Fragment implements FilmClickListner{
     private RecyclerView recyclerView;
@@ -53,8 +51,7 @@ public class FilmListFragment extends Fragment implements FilmClickListner{
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Фильмы");
-
+        getActivity().setTitle(getResources().getString(R.string.films));
     }
 
     @Override

@@ -18,9 +18,7 @@ import com.naso.tmdbapp.models.MoviesLaboratory;
 
 import org.w3c.dom.Text;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class MovieDetailFragment extends Fragment {
     private final static String ARG_KEY = "MOVIE_ID";
@@ -56,7 +54,7 @@ public class MovieDetailFragment extends Fragment {
         description.setText(movie.getOverview());
         TextView rate = view.findViewById(R.id.rating);
         LinearLayout start = view.findViewById(R.id.stars);
-        rate.setText("Рейтинг :" + Float.toString(movie.getVoteAverage()));
+        rate.setText(getResources().getString(R.string.rate)+ Float.toString(movie.getVoteAverage()));
         for (int i = 0; i < 5; i++)
         {
             if (((i*2) + 2) < movie.getVoteAverage())

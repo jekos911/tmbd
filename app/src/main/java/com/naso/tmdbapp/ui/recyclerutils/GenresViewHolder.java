@@ -23,9 +23,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class GenresViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 

@@ -7,9 +7,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class MyServiceGenerator {
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();

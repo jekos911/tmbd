@@ -8,9 +8,7 @@ import com.naso.tmdbapp.R;
 import com.naso.tmdbapp.models.Movie;
 
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public class MoviesViewHolder extends RecyclerView.ViewHolder {
 

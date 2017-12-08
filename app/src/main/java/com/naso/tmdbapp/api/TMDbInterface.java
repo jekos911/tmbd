@@ -10,9 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-/**
- * Created by жекос on 02.12.2017.
- */
+
 
 public interface TMDbInterface {
     @GET("/3/genre/movie/list")

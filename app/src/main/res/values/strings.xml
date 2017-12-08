@@ -3,4 +3,7 @@
     <string name="internet_warning">Проверьте интернет-соединение</string>
     <string name="genre_title">Жанры фильмов</string>
     <string name="search">Найти фильм</string>
+    <string name="films">Фильмы</string>
+    <string name="genres">Жанры</string>
+    <string name="rate">Рейтинг</string>
 </resources>
