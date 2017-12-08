@@ -40,18 +40,20 @@ import retrofit2.Response;
 public class FilmListFragment extends Fragment implements FilmClickListner{
     private RecyclerView recyclerView;
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.genres_fragment,container,false);
+        View view = inflater.inflate(R.layout.genres_fragment,container,false);
+        recyclerView = view.findViewById(R.id.genres_list);
+        updateUI();
+        return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.genres_list);
-        updateUI();
     }
 
     @Override

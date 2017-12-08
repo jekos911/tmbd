@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -14,6 +15,8 @@ import com.naso.tmdbapp.BuildConfig;
 import com.naso.tmdbapp.R;
 import com.naso.tmdbapp.models.Movie;
 import com.naso.tmdbapp.models.MoviesLaboratory;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by жекос on 02.12.2017.
@@ -35,7 +38,6 @@ public class MovieDetailFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setHasOptionsMenu(false);
         movie = MoviesLaboratory.getMovie(getArguments().getInt(ARG_KEY));
     }
 
@@ -43,12 +45,7 @@ public class MovieDetailFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.film_detail_layout,container,false);
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        View view =inflater.inflate(R.layout.film_detail_layout,container,false);
         TextView origTitle = view.findViewById(R.id.title_orig);
         origTitle.setText(movie.getOriginalTitle());
         TextView localTitle = view.findViewById(R.id.title_local);
@@ -57,5 +54,31 @@ public class MovieDetailFragment extends Fragment {
         Glide.with(view.getContext()).load(BuildConfig.API_URL_IMAGE+movie.getPosterUrl()).into(poster);
         TextView description = view.findViewById(R.id.description);
         description.setText(movie.getOverview());
+        TextView rate = view.findViewById(R.id.rating);
+        LinearLayout start = view.findViewById(R.id.stars);
+        rate.setText("Рейтинг :" + Float.toString(movie.getVoteAverage()));
+        for (int i = 0; i < 5; i++)
+        {
+            if (((i*2) + 2) < movie.getVoteAverage())
+            {
+                ImageView img = new ImageView(view.getContext());
+                img.setImageDrawable(getResources().getDrawable(R.drawable.ic_star_black_24dp,null));
+                start.addView(img);
+            }
+                else
+            {
+                ImageView img = new ImageView(view.getContext());
+                img.setImageDrawable(getResources().getDrawable(R.drawable.ic_star_border_black_24dp,null));
+                start.addView(img);
+            }
+        }
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
     }
 }
