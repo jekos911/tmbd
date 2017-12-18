@@ -6,4 +6,8 @@
     <string name="films">Фильмы</string>
     <string name="genres">Жанры</string>
     <string name="rate">Рейтинг</string>
+    <string name="start_popular">Популярное</string>
+    <string name="start_top_rated">Высшая оценка</string>
+    <string name="start_now_playing">Сейчас в прокате</string>
+    <string name="open_detail">Показать больше</string>
 </resources>

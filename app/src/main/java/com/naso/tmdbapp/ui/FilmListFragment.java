@@ -21,11 +21,10 @@ import android.widget.Toast;
 import com.naso.tmdbapp.BuildConfig;
 import com.naso.tmdbapp.R;
 import com.naso.tmdbapp.api.TMDbInternetConnection;
-import com.naso.tmdbapp.models.GenresList;
 import com.naso.tmdbapp.models.MoviesLaboratory;
 import com.naso.tmdbapp.models.SearchResult;
 import com.naso.tmdbapp.ui.recyclerutils.FilmClickListner;
-import com.naso.tmdbapp.ui.recyclerutils.GenresAdapter;
+
 import com.naso.tmdbapp.ui.recyclerutils.MoviesAdapter;
 import com.naso.tmdbapp.ui.recyclerutils.MoviesViewHolder;
 
@@ -59,7 +58,6 @@ public class FilmListFragment extends Fragment implements FilmClickListner{
         MovieDetailFragment fragment= MovieDetailFragment.newInstance(holder.getMovie().getId());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            fragment.setSharedElementEnterTransition(new DetailsTransition());
             fragment.setEnterTransition(new Fade());
             setExitTransition(new Fade());
             fragment.setSharedElementReturnTransition(new DetailsTransition());
@@ -67,7 +65,6 @@ public class FilmListFragment extends Fragment implements FilmClickListner{
 
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .addSharedElement(holder.getImageMovie(),"movieImage")
                 .replace(R.id.container,fragment)
                 .addToBackStack(null)
                 .commit();

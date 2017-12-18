@@ -9,6 +9,10 @@ public class MoviesLaboratory {
     private static GenresList genresList = new GenresList();
     private static List<Movie> filmList = new ArrayList<Movie>();
 
+    private static List<Movie> popular = new ArrayList<Movie>();
+    private static List<Movie> nowPlaying = new ArrayList<Movie>();
+    private static List<Movie> topRated = new ArrayList<Movie>();
+
     public static void addGenres(GenresList gList) {
         genresList = gList;
     }
@@ -29,6 +33,42 @@ public class MoviesLaboratory {
             if (movie.getId()==id)
                 return movie;
         }
+        for (Movie movie: popular) {
+            if (movie.getId()==id)
+                return movie;
+        }
+        for (Movie movie: nowPlaying) {
+            if (movie.getId()==id)
+                return movie;
+        }
+        for (Movie movie: topRated) {
+            if (movie.getId()==id)
+                return movie;
+        }
         return null;
+    }
+
+    public static List<Movie> getPopular() {
+        return popular;
+    }
+
+    public static void setPopular(List<Movie> popular) {
+        MoviesLaboratory.popular = popular;
+    }
+
+    public static List<Movie> getNowPlaying() {
+        return nowPlaying;
+    }
+
+    public static void setNowPlaying(List<Movie> nowPlaying) {
+        MoviesLaboratory.nowPlaying = nowPlaying;
+    }
+
+    public static List<Movie> getTopRated() {
+        return topRated;
+    }
+
+    public static void setTopRated(List<Movie> topRated) {
+        MoviesLaboratory.topRated = topRated;
     }
 }

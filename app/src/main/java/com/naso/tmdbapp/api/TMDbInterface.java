@@ -24,4 +24,13 @@ public interface TMDbInterface {
 
     @GET("/3/search/movie")
     Call<SearchResult> getSearchResult (@Query("api_key") String key, @Query("language") String lang, @Query("query") String query);
+
+    @GET("/3/movie/now_playing")
+    Call<SearchResult> getNowPlaying (@Query("api_key") String key, @Query("language") String lang);
+
+    @GET("/3/movie/popular")
+    Call<SearchResult> getPopular (@Query("api_key") String key, @Query("language") String lang);
+
+    @GET("/3/movie/top_rated")
+    Call<SearchResult> getTopRated (@Query("api_key") String key, @Query("language") String lang);
 }

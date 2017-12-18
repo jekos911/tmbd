@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.transition.Fade;
 
 import com.naso.tmdbapp.ui.GenresFragment;
+import com.naso.tmdbapp.ui.StartFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         if (fragmentManager.findFragmentById(R.id.container) == null)
             fragmentManager.beginTransaction()
-                    .add(R.id.container, new GenresFragment())
+                    .add(R.id.container, new StartFragment())
                     .commit();
     }
 
